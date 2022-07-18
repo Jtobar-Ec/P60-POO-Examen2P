@@ -31,8 +31,12 @@ private slots:
 
     void on_actionSalir_triggered();
 
+    void on_label_linkActivated(const QString &link);
+
 private:
     Ui::Juego *ui;
     Circulo *m_circulo;
+    QPixmap lienzo;
+     QPainter *mPainter;
 };
 #endif // JUEGO_H

@@ -6,10 +6,9 @@ Juego::Juego(QWidget *parent)
     , ui(new Ui::Juego)
 {
     ui->setupUi(this);
-    QPoint centro = ui->marco->geometry().center();
+
     m_circulo = new Circulo();
-    m_circulo->setX(centro.x());
-    m_circulo->setY(centro.y());
+
 }
 
 Juego::~Juego()
@@ -58,3 +57,18 @@ void Juego::on_actionSalir_triggered()
     this->close();
 }
 
+
+void Juego::on_label_linkActivated(const QString &link)
+{
+    lienzo.fill(Qt::white);
+
+    QPainter painter(&lienzo);
+
+   QPen pincel;
+   pincel.setWidth(5);
+   pincel.setColor(Qt::red);
+   pincel.setJoinStyle(Qt::MiterJoin);
+
+   painter.setPen(pincel);
+   mPainter->drawEllipse(100,100,100,100);
+}
