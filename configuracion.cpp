@@ -37,6 +37,8 @@ void Configuracion::setWidgetColor()
     int b = m_color.blue();
     QString style = "background-color: rgb(" + QString::number(r) + ", " + QString::number(g) + ", " + QString::number(b) + ")";
     ui->wigetColor->setStyleSheet(style);
+
+    m_color=QColorDialog::getColor(m_color,this,"Color del pincel");
 }
 
 const QColor &Configuracion::color() const

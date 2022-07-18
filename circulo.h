@@ -17,7 +17,7 @@ public:
 
 private:
     QPixmap lienzo;
-     QPainter *mPainter;
+    QPainter *mPainter;
 };
 
 #endif // CIRCULO_H

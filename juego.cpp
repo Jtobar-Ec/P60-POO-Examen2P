@@ -9,6 +9,8 @@ Juego::Juego(QWidget *parent)
 
     m_circulo = new Circulo();
 
+
+
 }
 
 Juego::~Juego()
@@ -60,15 +62,5 @@ void Juego::on_actionSalir_triggered()
 
 void Juego::on_label_linkActivated(const QString &link)
 {
-    lienzo.fill(Qt::white);
-
-    QPainter painter(&lienzo);
-
-   QPen pincel;
-   pincel.setWidth(5);
-   pincel.setColor(Qt::red);
-   pincel.setJoinStyle(Qt::MiterJoin);
-
-   painter.setPen(pincel);
-   mPainter->drawEllipse(100,100,100,100);
+ Circulo();
 }

@@ -30,5 +30,5 @@ Circulo::Circulo(int xpos, int ypos)
     pincel.setJoinStyle(Qt::MiterJoin);
 
     painter.setPen(pincel);
-    mPainter->drawEllipse(100,100,100,100);
+    mPainter->drawEllipse(200,100,100,100);
 }
